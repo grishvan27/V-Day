@@ -27,14 +27,14 @@ body {
 
 #image-container img {
     max-width: 100%; /* Keep this for responsiveness */
-    width: 400px; /* Default width */
+    width: 450px; /* Default width */   
     height: auto; /* Maintain aspect ratio */
 }
 
 /* Add media query for mobile devices */
 @media screen and (max-width: 768px) {
     #image-container img {
-        width: 320px; /* Larger width for mobile */
+        width: 450px; /* Larger width for mobile */ 
     }
 }
 
