@@ -27,15 +27,8 @@ body {
 
 #image-container img {
     max-width: 100%; /* Keep this for responsiveness */
-    width: 450px; /* Default width */   
+    width: 400px; /* Default width */
     height: auto; /* Maintain aspect ratio */
-}
-
-/* Add media query for mobile devices */
-@media screen and (max-width: 768px) {
-    #image-container img {
-        width: 450px; /* Larger width for mobile */ 
-    }
 }
 
 #text-container {
@@ -46,8 +39,11 @@ body {
     justify-content: center; /* Add this */
 }
 
+#question, #valentine-message, button {
+    font-family: 'Sacramento', cursive, 'Arial', sans-serif;
+}
+
 #question {
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
     font-size: 52px; /* Set font size for the question */
 }
 
@@ -56,28 +52,49 @@ body {
 }
 
 button {
-    padding: 10px 20px; /* Set padding for buttons */
-    margin: 0 10px; /* Set margin around buttons */
-    font-size: 26px; /* Set font size for buttons */
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
-    background-color: #FB607F; /* Set button background color */
-    color: white; /* Set text color to white */
-    border: none; /* Remove button border */
-    cursor: pointer; /* Set cursor to pointer on hover */
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 26px;
+    font-family: 'Sacramento', cursive, 'Arial', sans-serif;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff4d75;
 }
 
 #valentine-message {
-    font-family: 'Sacramento', cursive;
     font-size: 36px;
     color: #FB607F;
     margin-top: 20px;
-    max-width: 1200px;  /* Increased from 800px to 1200px to accommodate longer lines */
-    display: none; /* Hidden by default */
+    max-width: 1200px;
+    display: none;
     animation: fadeIn 2s ease-in;
-    line-height: 1.5;  /* Added for better line spacing */
+    line-height: 1.5;
+    will-change: opacity;
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    #question {
+        font-size: 36px;
+    }
+    
+    button {
+        font-size: 20px;
+        margin: 5px;
+    }
+    
+    #valentine-message {
+        font-size: 24px;
+    }
 }
