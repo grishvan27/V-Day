@@ -26,8 +26,9 @@ body {
 }
 
 #image-container img {
-    max-width: 100%; /* Add this to make images responsive */
-    height: auto; /* Add this to maintain aspect ratio */
+    max-width: 100%; /* Keep this for responsiveness */
+    width: 400px; /* Add specific width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 #text-container {
