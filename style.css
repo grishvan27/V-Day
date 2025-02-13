@@ -40,7 +40,7 @@ body {
 }
 
 #question, #valentine-message, button {
-    font-family: 'Sacramento', cursive, 'Arial', sans-serif;
+    font-family: 'Sacramento', cursive;
 }
 
 #question {
@@ -55,17 +55,16 @@ button {
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 26px;
-    font-family: 'Sacramento', cursive, 'Arial', sans-serif;
+    font-family: 'Sacramento', cursive;
     background-color: #FB607F;
     color: white;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
-    background-color: #ff4d75;
+    transform: scale(1.1);
 }
 
 #valentine-message {
@@ -76,7 +75,6 @@ button:hover {
     display: none;
     animation: fadeIn 2s ease-in;
     line-height: 1.5;
-    will-change: opacity;
 }
 
 @keyframes fadeIn {
