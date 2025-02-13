@@ -27,7 +27,7 @@ body {
 
 #image-container img {
     max-width: 100%; /* Keep this for responsiveness */
-    width: 400px; /* Add specific width */
+    width: 420px; /* Add specific width */
     height: auto; /* Maintain aspect ratio */
 }
 
