@@ -106,6 +106,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// Display the cat.gif initially
-displayCat();
