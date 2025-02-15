@@ -96,3 +96,57 @@ button:hover {
         font-size: 24px;
     }
 }
+
+#password-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FADADD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.password-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.password-container h2 {
+    font-family: 'Sacramento', cursive;
+    color: #FB607F;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.password-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+    border: 2px solid #FB607F;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.password-container button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Sacramento', cursive;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.password-container button:hover {
+    transform: scale(1.05);
+}

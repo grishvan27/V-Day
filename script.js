@@ -1,5 +1,8 @@
 // script.js
 
+// Add these at the top of script.js
+const CORRECT_PASSWORD = "theoffice"; // Change this to your desired password
+
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
@@ -77,6 +80,32 @@ function display2Hearts() {
         document.getElementById('valentine-message').style.display = 'block';
     };
 }
+
+function checkPassword() {
+    const passwordInput = document.getElementById('password-input');
+    const passwordError = document.getElementById('password-error');
+    const mainContent = document.getElementById('container');
+    const passwordOverlay = document.getElementById('password-overlay');
+
+    if (passwordInput.value === CORRECT_PASSWORD) {
+        passwordOverlay.style.display = 'none';
+        mainContent.style.display = 'flex';
+        displayCat(); // Start the valentine's page
+    } else {
+        passwordError.style.display = 'block';
+        passwordInput.value = ''; // Clear the input
+    }
+}
+
+// Add event listener for Enter key
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('password-input');
+    passwordInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+});
 
 // Display the cat.gif initially
 displayCat();
